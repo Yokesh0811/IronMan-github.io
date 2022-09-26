@@ -1,0 +1,132 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    position: relative;
+    width: 600px;
+    height: 320px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.circle{
+    visibility: hidden;
+    content: '';
+    width: 600px;
+    height: 320px;
+    position: absolute;
+    background: radial-gradient(#C93241 30%,#DEB95C );
+    background-color: #C93241 ;
+    clip-path: circle(100px);
+    transition: 0.6s;
+    border-radius: 20px;
+}
+.card:hover .circle{
+    visibility: visible;
+    clip-path: circle(500px);
+}
+.img-logo{
+    position: absolute;
+    width: 150px;
+    left: 38%;
+    top: 28%;
+    transition: 0.8s;
+}
+.card:hover .img-logo{
+    transform: translateY(200%);
+}
+.img1{
+    position: absolute;
+    top: 58%;
+    width: 150px;
+    transform: translateX(-100%);
+    transition: 0.8s;
+}
+.img2{
+    position: absolute;
+    width: 160px;
+    top: 10%;
+    left: 70%;
+    transform: translateY(110%);
+    transition: 0.8s;
+}
+.img3{
+    position: absolute;
+    width: 100px;
+    left: 40%;
+    top: 5%;
+    transform: translateY(-100%);
+    transition: 0.8s;
+}
+.img4{
+    position: absolute;
+    width: 40px;
+    top: 2%;
+    left: 1%;
+    transform: translateX(-120%);
+    transition: 0.8s;
+}
+.card:hover .img4{
+    transform: translateX(10%);
+}
+.card:hover .img3{
+    transform: translateY(35%);
+
+}
+.card:hover .img2{
+    transform: translateY(-5%);
+}
+.card:hover .img1{
+    transform: translateX(1%);
+    transform: translateY(-15%);
+}
+.content{
+    position: absolute;
+    left: 30%;
+    top: 35%;
+}
+.content h1{
+    color: black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 40px;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .content h1{
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(max-width:700px){
+    .circle{
+        visibility: hidden;
+    }
+    .card:hover{
+        width:450px;
+        height: 500px;
+    }
+    .card:hover .circle{
+        visibility: visible;
+        height: 100%;
+        width: 100%;
+    }
+    .card:hover h1{
+        font-size: 35px;
+    }
+    .card:hover .img-logo{
+        transform: translateY(500%);
+    }
+    .card:hover .img3{
+        top: 15%;
+    }
+}
